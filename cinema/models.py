@@ -122,5 +122,8 @@ class Ticket(models.Model):
 
     class Meta:
         constraints = [
-            UniqueConstraint(fields=["movie_session", "row", "seat"], name="unique_ticket_seat_movie_session"),
+            UniqueConstraint(
+                fields=["movie_session", "row", "seat"],
+                name="unique_ticket_seat_movie_session"
+            ),
         ]
